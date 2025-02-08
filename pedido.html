@@ -45,26 +45,32 @@
     <script>
         $(document).ready(function() {
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
             let total = 0;
             let productosHTML = "";
 
-            carrito.forEach(producto => {
-                let precio = parseFloat(producto.PRECIO_VENTA); // Convertir a número
-                if (!isNaN(precio)) {
-                    total += precio;
-                }
+            // Cargar los productos del JSON para verificar precios correctos
+            $.getJSON("https://raw.githubusercontent.com/AbarrotitoPremium/Abarrotito-Premium/main/productos.json", function(data) {
+                carrito.forEach(producto => {
+                    let productoData = data.find(p => p.ITEM == producto.ITEM); // Buscar el producto en el JSON original
+                    let precio = productoData ? parseFloat(productoData.PRECIO_VENTA) : 0;
 
-                productosHTML += `
-                    <div class="product">
-                        <h5>${producto.DESCRIPCIÓN}</h5>
-                        <p><strong>Precio:</strong> $${precio.toFixed(2)}</p>
-                    </div>
-                `;
+                    if (!isNaN(precio)) {
+                        total += precio;
+                    }
+
+                    productosHTML += `
+                        <div class="product">
+                            <h5>${producto.DESCRIPCIÓN}</h5>
+                            <p><strong>Precio:</strong> $${precio.toFixed(2)}</p>
+                        </div>
+                    `;
+                });
+
+                $("#productos").html(productosHTML);
+                $("#total").text(`Total: $${total.toFixed(2)}`);
+            }).fail(function() {
+                console.error("Error al cargar productos.json");
             });
-
-            document.getElementById("productos").innerHTML = productosHTML;
-            document.getElementById("total").innerText = `Total: $${total.toFixed(2)}`;
         });
 
         function finalizarPedido() {
