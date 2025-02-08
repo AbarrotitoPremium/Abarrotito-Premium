@@ -67,7 +67,7 @@
                         <div class="cart-item">
                             <img src="${item.IMAGEN}" alt="${item.DESCRIPCIÓN}">
                             <span>${item.DESCRIPCIÓN}</span>
-                            <span>$${item.PRECIO_VENTA}</span>
+                            <span>$${Math.round(item.PRECIO_VENTA)}</span>
                         </div>
                     `;
                     total += item.PRECIO_VENTA;
@@ -88,7 +88,7 @@
                 return;
             }
 
-            let pedidoDetalles = cart.map(item => `${item.DESCRIPCIÓN} - $${item.PRECIO_VENTA}`).join("\n");
+            let pedidoDetalles = cart.map(item => `${item.DESCRIPCIÓN} - $${Math.round(item.PRECIO_VENTA)}`).join("\n");
 
             let emailBody = encodeURIComponent(`Pedido realizado:\n\n${pedidoDetalles}\n\nTotal: $${Math.round(cart.reduce((acc, item) => acc + item.PRECIO_VENTA, 0))}`);
 
