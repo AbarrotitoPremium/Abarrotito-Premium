@@ -11,7 +11,7 @@
             background-color: #f8f9fa;
         }
         .cart-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: auto;
             background-color: white;
             padding: 20px;
@@ -21,6 +21,7 @@
         .product {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
         }
@@ -29,6 +30,17 @@
             height: auto;
             border-radius: 5px;
             margin-right: 15px;
+        }
+        .product-info {
+            flex-grow: 1;
+        }
+        .btn-remove {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
         }
         .btn-container {
             display: flex;
@@ -57,23 +69,23 @@
             let productosHTML = "";
 
             $.getJSON("https://raw.githubusercontent.com/AbarrotitoPremium/Abarrotito-Premium/main/productos.json", function(data) {
-                carrito.forEach(producto => {
+                carrito.forEach((producto, index) => {
                     let productoData = data.find(p => p.ITEM == producto.ITEM);
-                    let precio = productoData ? parseFloat(productoData.PRECIO_VENTA).toFixed(2) : 0;
-
-                    if (!isNaN(precio)) {
+                    if (productoData) {
+                        let precio = parseFloat(productoData.PRECIO_VENTA).toFixed(2);
                         total += parseFloat(precio);
-                    }
 
-                    productosHTML += `
-                        <div class="product">
-                            <img src="${productoData.IMAGEN}" alt="${productoData.DESCRIPCIÓN}">
-                            <div>
-                                <h5>${productoData.DESCRIPCIÓN}</h5>
-                                <p><strong>Precio:</strong> $${precio}</p>
+                        productosHTML += `
+                            <div class="product">
+                                <img src="${productoData.IMAGEN}" alt="${productoData.DESCRIPCIÓN}">
+                                <div class="product-info">
+                                    <h5>${productoData.DESCRIPCIÓN}</h5>
+                                    <p><strong>Precio:</strong> $${precio}</p>
+                                </div>
+                                <button class="btn-remove" onclick="eliminarProducto(${index})">X</button>
                             </div>
-                        </div>
-                    `;
+                        `;
+                    }
                 });
 
                 $("#productos").html(productosHTML);
@@ -82,6 +94,13 @@
                 console.error("Error al cargar productos.json");
             });
         });
+
+        function eliminarProducto(index) {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            location.reload();
+        }
 
         function finalizarPedido() {
             alert("Pedido enviado con éxito. ¡Gracias por su compra!");
