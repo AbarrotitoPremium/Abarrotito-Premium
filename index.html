@@ -61,13 +61,15 @@
 
         function agregarAlCarrito(itemId) {
             $.getJSON("https://raw.githubusercontent.com/AbarrotitoPremium/Abarrotito-Premium/main/productos.json", function(data) {
-                let producto = data.find(p => p.ITEM === itemId);
+                let producto = data.find(p => p.ITEM == itemId);
                 if (producto) {
                     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
                     carrito.push(producto);
                     localStorage.setItem("carrito", JSON.stringify(carrito));
                     window.location.href = "pedido.html";
                 }
+            }).fail(function() {
+                console.error("Error al obtener el JSON.");
             });
         }
     </script>
