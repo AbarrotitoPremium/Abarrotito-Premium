@@ -207,4 +207,60 @@
       "PRECIO VENTA": 309.6,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOTOPOS%201.36%20KG%20KIRKLAND%20SIGNATURE.jpeg?raw=true"
    }
+   {
+      "ITEM": 153001,
+      "DESCRIPCIÓN": "PASAS CUBIERTAS DE CHOCOLATE 1.53 KG KIRKLAND SIGNATURE",
+      "TIPO": "NO PERECEDERO",
+      "COSTO TIENDA": 153,
+      "PRECIO VENTA": 184,
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PASAS%20CUBIERTAS%20DE%20CHOCOLATE%201.53%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
+   },
+   {
+      "ITEM": 136001,
+      "DESCRIPCIÓN": "PISTACHES 1.36 KG KIRKLAND SIGNATURE",
+      "TIPO": "NO PERECEDERO",
+      "COSTO TIENDA": 136,
+      "PRECIO VENTA": 163,
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PISTACHES%201.36%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
+   },
+   {
+      "ITEM": 61001,
+      "DESCRIPCIÓN": "PURE DE TOMATE 6.1 KG DEL FUERTE",
+      "TIPO": "NO PERECEDERO",
+      "COSTO TIENDA": 61,
+      "PRECIO VENTA": 73,
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PURE%20DE%20TOMATE%206.1%20KG%20DEL%20FUERTE.jpg?raw=true"
+   },
+   {
+      "ITEM": 426001,
+      "DESCRIPCIÓN": "SERVILLETAS 4260 PZAS KIRKLAND SIGNATURE",
+      "TIPO": "NO PERECEDERO",
+      "COSTO TIENDA": 426,
+      "PRECIO VENTA": 511,
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/SERVILLETAS%204260%20PZAS%20KIRKLAND%20SIGNATURE.jpg?raw=true"
+   },
+   {
+      "ITEM": 214001,
+      "DESCRIPCIÓN": "SUSTITUTO DE CREMA 2.14 KG COFFEE MATE",
+      "TIPO": "NO PERECEDERO",
+      "COSTO TIENDA": 214,
+      "PRECIO VENTA": 257,
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/SUSTITUTO%20DE%20CREMA%202.14%20KG%20COFFEE%20MATE.jpg?raw=true"
+   },
+   {
+      "ITEM": 121601,
+      "DESCRIPCIÓN": "TOALLAS DE PAPEL 12160 HOJAS KIRKLAND SIGNATURE",
+      "TIPO": "NO PERECEDERO",
+      "COSTO TIENDA": 1216,
+      "PRECIO VENTA": 1460,
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOALLAS%20DE%20PAPEL%2012160%20HOJAS%20KIRKLAND%20SIGNATURE.jpg?raw=true"
+   },
+   {
+      "ITEM": 225001,
+      "DESCRIPCIÓN": "TOALLAS SECADORA 2250 HOJAS KIRKLAND SIGNATURE",
+      "TIPO": "NO PERECEDERO",
+      "COSTO TIENDA": 225,
+      "PRECIO VENTA": 270,
+      "IMAGEN": "https://
+
 ]
