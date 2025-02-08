@@ -96,7 +96,7 @@
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/CHICHARRON_CERDO.jpg?raw=true"
    },
    {
-      "ITEM": 349001,
+      "ITEM": 349002,
       "DESCRIPCIÓN": "DETERGENTE LIQUIDO 9 L MAS COLOR",
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 349,
@@ -207,6 +207,4 @@
       "PRECIO VENTA": 309.6,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/TOTOPOS.jpg?raw=true"
    }
-]
-
 ]
