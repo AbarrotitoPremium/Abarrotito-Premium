@@ -165,7 +165,7 @@
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 200,
       "PRECIO VENTA": 240.0,
-      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/PAN_PITA.jpg?raw=true"
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PAN%20PITA%201.4%20KG%20LIBANIUS.jpeg?raw=true"
    },
    {
       "ITEM": 378001,
@@ -173,7 +173,7 @@
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 378,
       "PRECIO VENTA": 453.6,
-      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/PAPAS_FRITAS.jpg?raw=true"
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PAPAS%20FRITAS%20ESTILO%20ARTESANAL%20850%20G%20CAPE%20COD.jpg?raw=true"
    },
    {
       "ITEM": 419001,
@@ -181,7 +181,7 @@
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 419,
       "PRECIO VENTA": 502.8,
-      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/PAPEL_HIGIENICO.jpg?raw=true"
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PAPEL%20HIGIENICO%2030380%20HOJAS%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 339001,
@@ -189,7 +189,7 @@
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 339,
       "PRECIO VENTA": 406.8,
-      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/TOCINO_CERDO.jpg?raw=true"
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOCINO%20DE%20CERDO%204454%20G%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 249001,
@@ -197,7 +197,7 @@
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 249,
       "PRECIO VENTA": 298.8,
-      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/TONKOTSU_RAMEN.jpg?raw=true"
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TONKOTSU%20RAMEN%206101%20G%20NONGSHIM.jpg?raw=true"
    },
    {
       "ITEM": 258001,
@@ -205,6 +205,6 @@
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 258,
       "PRECIO VENTA": 309.6,
-      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotido-Premium/blob/main/TOTOPOS.jpg?raw=true"
+      "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOTOPOS%201.36%20KG%20KIRKLAND%20SIGNATURE.jpeg?raw=true"
    }
 ]
