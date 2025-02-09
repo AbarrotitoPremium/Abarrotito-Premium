@@ -51,7 +51,7 @@
     <div class="container mt-4">
         <h1 class="text-center">Carrito de Compras</h1>
         <div id="cart-items"></div>
-        <h3 class="text-end mt-3">Total: <span id="total-price">$0</span></h3>
+        <h3 class="text-end mt-3">Total: <span id="total-price">$0.00</span></h3>
         <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido</button>
         <button class="btn btn-secondary" onclick="window.location.href='index.html'">Seguir Comprando</button>
     </div>
@@ -70,7 +70,10 @@
                 cartHtml = "<p class='text-center'>No hay productos en el carrito.</p>";
             } else {
                 carrito.forEach((item, index) => {
-                    let precio = parseFloat(item.PRECIO_VENTA) || 0; // Convertir a número
+                    let precio = parseFloat(item.PRECIO_VENTA) || 0; // Convertir a número de forma segura
+                    if (isNaN(precio)) {
+                        precio = 0; // Si sigue NaN, lo cambiamos a 0
+                    }
                     total += precio;
 
                     cartHtml += `
