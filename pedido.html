@@ -63,7 +63,7 @@
         });
 
         function mostrarCarrito() {
-            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]"); // Verifica si localStorage existe
+            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]"); // Recuperar carrito del almacenamiento local
             let total = 0;
             let cartHtml = "";
 
@@ -71,9 +71,9 @@
                 cartHtml = "<p class='text-center'>No hay productos en el carrito.</p>";
             } else {
                 carrito.forEach((item, index) => {
-                    let precio = parseFloat(item.PRECIO_VENTA); // Se asegura de que el precio sea un número válido
+                    let precio = parseFloat(item["PRECIO VENTA"]); // Convertir precio a número
                     if (isNaN(precio)) {
-                        precio = 0; // Si hay un error, lo ajusta a 0 para evitar NaN
+                        precio = 0; // Si es NaN, se ajusta a 0
                     }
                     total += precio;
 
