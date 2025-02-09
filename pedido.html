@@ -55,7 +55,7 @@
     <nav class="navbar navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://via.placeholder.com/150x40?text=Logo" alt="Logo Abarrotito">
+                <img src="ABARROTITO.png" alt="Abarrotito Premium">
             </a>
         </div>
     </nav>
@@ -77,8 +77,8 @@
             let total = 0;
 
             carrito.forEach((producto, index) => {
-                let precio = parseFloat(producto.PRECIO_VENTA).toFixed(2); // Corrige NaN
-                total += parseFloat(producto.PRECIO_VENTA);
+                let precio = parseFloat(producto["PRECIO VENTA"]).toFixed(2); // Corrección de NaN
+                total += parseFloat(producto["PRECIO VENTA"]);
 
                 cartItemsHtml += `
                     <div class="cart-item">
