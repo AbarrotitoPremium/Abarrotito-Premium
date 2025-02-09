@@ -68,7 +68,7 @@
         });
 
         function mostrarCarrito() {
-            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]"); // Obtiene los productos guardados
+            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
             let total = 0;
             let cartHtml = "";
 
@@ -76,7 +76,7 @@
                 cartHtml = "<p class='text-center'>No hay productos en el carrito.</p>";
             } else {
                 carrito.forEach((item, index) => {
-                    let precio = parseFloat(item.PRECIO_VENTA);
+                    let precio = parseFloat(item["PRECIO VENTA"]); // Acceder correctamente a la clave del JSON
                     if (isNaN(precio)) {
                         precio = 0;
                     }
