@@ -10,6 +10,12 @@
         body {
             background-color: #f8f9fa;
         }
+        .navbar {
+            background-color: black;
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
         .product-card {
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -32,6 +38,16 @@
     </style>
 </head>
 <body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://via.placeholder.com/150x40?text=Logo" alt="Logo Abarrotito">
+            </a>
+        </div>
+    </nav>
+
     <div class="container mt-4">
         <h1 class="text-center">Catálogo de Productos</h1>
         <div class="row" id="product-list"></div>
