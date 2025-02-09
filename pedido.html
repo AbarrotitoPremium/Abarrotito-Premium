@@ -62,7 +62,7 @@
         });
 
         function mostrarCarrito() {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]"); // Verifica si localStorage existe
             let total = 0;
             let cartHtml = "";
 
@@ -70,15 +70,12 @@
                 cartHtml = "<p class='text-center'>No hay productos en el carrito.</p>";
             } else {
                 carrito.forEach((item, index) => {
-                    let precio = parseFloat(item.PRECIO_VENTA) || 0; // Convertir a número de forma segura
-                    if (isNaN(precio)) {
-                        precio = 0; // Si sigue NaN, lo cambiamos a 0
-                    }
+                    let precio = parseFloat(item["PRECIO_VENTA"]) || 0; // Accede de forma segura a PRECIO_VENTA
                     total += precio;
 
                     cartHtml += `
                         <div class="product-card">
-                            <h5>${item.DESCRIPCIÓN}</h5>
+                            <h5>${item["DESCRIPCIÓN"]}</h5>
                             <p><strong>Precio:</strong> $${precio.toFixed(2)}</p>
                             <button class="btn-remove" onclick="eliminarProducto(${index})">Eliminar</button>
                         </div>
@@ -91,7 +88,7 @@
         }
 
         function eliminarProducto(index) {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
             carrito.splice(index, 1);
             localStorage.setItem("carrito", JSON.stringify(carrito));
             mostrarCarrito();
@@ -99,7 +96,7 @@
 
         function finalizarPedido() {
             alert("¡Pedido finalizado! Se enviará a tu correo.");
-            localStorage.removeItem("carrito"); // Limpia el carrito
+            localStorage.removeItem("carrito");
             window.location.href = "index.html";
         }
     </script>
