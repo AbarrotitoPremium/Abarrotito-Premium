@@ -18,6 +18,11 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        .product-card img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
         .btn-remove {
             background-color: red;
             color: white;
@@ -63,7 +68,7 @@
         });
 
         function mostrarCarrito() {
-            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]"); // Recuperar carrito del almacenamiento local
+            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]"); // Obtiene los productos guardados
             let total = 0;
             let cartHtml = "";
 
@@ -71,14 +76,15 @@
                 cartHtml = "<p class='text-center'>No hay productos en el carrito.</p>";
             } else {
                 carrito.forEach((item, index) => {
-                    let precio = parseFloat(item["PRECIO VENTA"]); // Convertir precio a número
+                    let precio = parseFloat(item.PRECIO_VENTA);
                     if (isNaN(precio)) {
-                        precio = 0; // Si es NaN, se ajusta a 0
+                        precio = 0;
                     }
                     total += precio;
 
                     cartHtml += `
                         <div class="product-card">
+                            <img src="${item.IMAGEN}" alt="${item.DESCRIPCIÓN}">
                             <h5>${item.DESCRIPCIÓN}</h5>
                             <p><strong>Precio:</strong> $${precio.toFixed(2)}</p>
                             <button class="btn-remove" onclick="eliminarProducto(${index})">Eliminar</button>
