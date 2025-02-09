@@ -43,7 +43,7 @@
     <nav class="navbar navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://via.placeholder.com/150x40?text=Logo" alt="Logo Abarrotito">
+                <img src="ABARROTITO.png" alt="Abarrotito Premium">
             </a>
         </div>
     </nav>
@@ -58,7 +58,7 @@
             $.getJSON("https://raw.githubusercontent.com/AbarrotitoPremium/Abarrotito-Premium/main/productos.json", function(data) {
                 let products = "";
                 data.forEach(item => {
-                    let precio = parseFloat(item.PRECIO_VENTA).toFixed(2); // Corrige el precio para evitar NaN
+                    let precio = parseFloat(item["PRECIO VENTA"]).toFixed(2); // Corregido para evitar NaN
                     products += `
                         <div class="col-md-4">
                             <div class="product-card">
