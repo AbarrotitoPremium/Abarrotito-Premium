@@ -10,31 +10,35 @@
         body {
             background-color: #f8f9fa;
         }
+        .navbar {
+            background-color: #000;
+        }
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
         .cart-container {
-            max-width: 700px;
+            max-width: 600px;
             margin: auto;
-            background-color: white;
+            background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        .product {
+        .cart-item {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #ddd;
+            align-items: center;
             padding: 10px 0;
+            border-bottom: 1px solid #ddd;
         }
-        .product img {
-            width: 80px;
-            height: auto;
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
             border-radius: 5px;
-            margin-right: 15px;
         }
-        .product-info {
-            flex-grow: 1;
-        }
-        .btn-remove {
+        .delete-btn {
             background-color: red;
             color: white;
             border: none;
@@ -42,73 +46,74 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        .btn-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
+        .delete-btn:hover {
+            background-color: darkred;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <div class="cart-container">
-            <h2 class="text-center">Carrito de Compras</h2>
-            <div id="productos"></div>
-            <h4 class="text-end" id="total">Total: $0.00</h4>
-            <div class="btn-container">
-                <button class="btn btn-secondary" onclick="window.location.href='index.html'">Seguir Comprando</button>
-                <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido</button>
-            </div>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://abarrotitopremium.github.io/Abarrotito-Premium/logo.png" alt="Logo" width="50"> Abarrotito Premium
+            </a>
+        </div>
+    </nav>
+
+    <div class="cart-container mt-4">
+        <h2 class="text-center">Carrito de Compras</h2>
+        <div id="cart-list"></div>
+        <h4 class="text-end mt-3">Total: $<span id="total">0.00</span></h4>
+        <div class="text-center mt-3">
+            <button class="btn btn-secondary" onclick="window.location.href='index.html'">Seguir Comprando</button>
+            <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido</button>
         </div>
     </div>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            let total = 0;
-            let productosHTML = "";
+            actualizarCarrito();
 
-            $.getJSON("https://raw.githubusercontent.com/AbarrotitoPremium/Abarrotito-Premium/main/productos.json", function(data) {
-                carrito.forEach((producto, index) => {
-                    let productoData = data.find(p => p.ITEM == producto.ITEM);
-                    if (productoData) {
-                        let precio = parseFloat(productoData.PRECIO_VENTA).toFixed(2);
-                        total += parseFloat(precio);
+            function actualizarCarrito() {
+                let cartHTML = "";
+                let total = 0;
 
-                        productosHTML += `
-                            <div class="product">
-                                <img src="${productoData.IMAGEN}" alt="${productoData.DESCRIPCIÓN}">
-                                <div class="product-info">
-                                    <h5>${productoData.DESCRIPCIÓN}</h5>
-                                    <p><strong>Precio:</strong> $${precio}</p>
-                                </div>
-                                <button class="btn-remove" onclick="eliminarProducto(${index})">X</button>
-                            </div>
-                        `;
-                    }
+                carrito.forEach((item, index) => {
+                    let precio = parseFloat(item.PRECIO_VENTA).toFixed(2);
+                    total += parseFloat(item.PRECIO_VENTA);
+
+                    cartHTML += `
+                        <div class="cart-item">
+                            <img src="${item.IMAGEN}" alt="${item.DESCRIPCIÓN}">
+                            <span>${item.DESCRIPCIÓN} - $${precio}</span>
+                            <button class="delete-btn" onclick="eliminarProducto(${index})">X</button>
+                        </div>
+                    `;
                 });
 
-                $("#productos").html(productosHTML);
-                $("#total").text(`Total: $${total.toFixed(2)}`);
-            }).fail(function() {
-                console.error("Error al cargar productos.json");
-            });
+                $("#cart-list").html(cartHTML);
+                $("#total").text(total.toFixed(2));
+            }
+
+            window.eliminarProducto = function (index) {
+                carrito.splice(index, 1);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                actualizarCarrito();
+            };
+
+            window.finalizarPedido = function () {
+                if (carrito.length === 0) {
+                    alert("Tu carrito está vacío.");
+                    return;
+                }
+
+                let detallesPedido = carrito.map(item => `${item.DESCRIPCIÓN} - $${item.PRECIO_VENTA}`).join("\n");
+                let mailtoLink = `mailto:vinoclubhermosillo@gmail.com?subject=Pedido&body=${encodeURIComponent(detallesPedido)}`;
+                window.location.href = mailtoLink;
+            };
         });
-
-        function eliminarProducto(index) {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            carrito.splice(index, 1);
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            location.reload();
-        }
-
-        function finalizarPedido() {
-            alert("Pedido enviado con éxito. ¡Gracias por su compra!");
-            localStorage.removeItem("carrito"); 
-            window.location.href = "index.html";
-        }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
