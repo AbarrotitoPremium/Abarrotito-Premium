@@ -33,6 +33,7 @@
         .navbar {
             background-color: black;
             padding: 10px;
+            text-align: center;
         }
         .navbar img {
             height: 50px;
@@ -62,7 +63,7 @@
         });
 
         function mostrarCarrito() {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]"); // Verifica si localStorage existe
             let total = 0;
             let cartHtml = "";
 
@@ -70,9 +71,9 @@
                 cartHtml = "<p class='text-center'>No hay productos en el carrito.</p>";
             } else {
                 carrito.forEach((item, index) => {
-                    let precio = parseFloat(item.PRECIO_VENTA) || 0; // Convertir a número de forma segura
+                    let precio = parseFloat(item.PRECIO_VENTA); // Se asegura de que el precio sea un número válido
                     if (isNaN(precio)) {
-                        precio = 0; // Si sigue NaN, lo cambiamos a 0
+                        precio = 0; // Si hay un error, lo ajusta a 0 para evitar NaN
                     }
                     total += precio;
 
@@ -91,7 +92,7 @@
         }
 
         function eliminarProducto(index) {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
             carrito.splice(index, 1);
             localStorage.setItem("carrito", JSON.stringify(carrito));
             mostrarCarrito();
@@ -99,7 +100,7 @@
 
         function finalizarPedido() {
             alert("¡Pedido finalizado! Se enviará a tu correo.");
-            localStorage.removeItem("carrito"); // Limpia el carrito
+            localStorage.removeItem("carrito");
             window.location.href = "index.html";
         }
     </script>
