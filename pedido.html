@@ -11,17 +11,16 @@
             background-color: #f8f9fa;
         }
         .navbar {
-            background-color: #000;
+            background-color: black;
         }
-        .navbar-brand {
-            color: white;
-            font-weight: bold;
+        .navbar-brand img {
+            height: 40px;
         }
         .cart-container {
             max-width: 600px;
-            margin: auto;
-            background: white;
+            margin: 20px auto;
             padding: 20px;
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
@@ -38,82 +37,78 @@
             object-fit: cover;
             border-radius: 5px;
         }
-        .delete-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
+        .remove-btn {
             cursor: pointer;
-            border-radius: 5px;
+            color: red;
+            font-weight: bold;
         }
-        .delete-btn:hover {
-            background-color: darkred;
+        .total-container {
+            font-size: 1.2rem;
+            text-align: right;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
+
     <!-- Barra de navegación -->
     <nav class="navbar navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://abarrotitopremium.github.io/Abarrotito-Premium/logo.png" alt="Logo" width="50"> Abarrotito Premium
+                <img src="https://via.placeholder.com/150x40?text=Logo" alt="Logo Abarrotito">
             </a>
         </div>
     </nav>
 
-    <div class="cart-container mt-4">
+    <div class="container cart-container">
         <h2 class="text-center">Carrito de Compras</h2>
-        <div id="cart-list"></div>
-        <h4 class="text-end mt-3">Total: $<span id="total">0.00</span></h4>
-        <div class="text-center mt-3">
-            <button class="btn btn-secondary" onclick="window.location.href='index.html'">Seguir Comprando</button>
-            <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido</button>
+        <div id="cart-items"></div>
+        <div class="total-container">
+            <strong>Total: $<span id="total">0.00</span></strong>
         </div>
+        <button class="btn btn-primary" onclick="window.location.href='index.html'">Seguir Comprando</button>
+        <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido</button>
     </div>
 
     <script>
-        $(document).ready(function () {
+        function cargarCarrito() {
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            actualizarCarrito();
+            let cartItemsHtml = "";
+            let total = 0;
 
-            function actualizarCarrito() {
-                let cartHTML = "";
-                let total = 0;
+            carrito.forEach((producto, index) => {
+                let precio = parseFloat(producto.PRECIO_VENTA).toFixed(2); // Corrige NaN
+                total += parseFloat(producto.PRECIO_VENTA);
 
-                carrito.forEach((item, index) => {
-                    let precio = parseFloat(item.PRECIO_VENTA).toFixed(2);
-                    total += parseFloat(item.PRECIO_VENTA);
+                cartItemsHtml += `
+                    <div class="cart-item">
+                        <img src="${producto.IMAGEN}" alt="${producto.DESCRIPCIÓN}">
+                        <span>${producto.DESCRIPCIÓN} - $${precio}</span>
+                        <span class="remove-btn" onclick="eliminarDelCarrito(${index})">X</span>
+                    </div>
+                `;
+            });
 
-                    cartHTML += `
-                        <div class="cart-item">
-                            <img src="${item.IMAGEN}" alt="${item.DESCRIPCIÓN}">
-                            <span>${item.DESCRIPCIÓN} - $${precio}</span>
-                            <button class="delete-btn" onclick="eliminarProducto(${index})">X</button>
-                        </div>
-                    `;
-                });
+            document.getElementById("cart-items").innerHTML = cartItemsHtml;
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
 
-                $("#cart-list").html(cartHTML);
-                $("#total").text(total.toFixed(2));
-            }
+        function eliminarDelCarrito(index) {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            cargarCarrito(); // Recargar la lista del carrito
+        }
 
-            window.eliminarProducto = function (index) {
-                carrito.splice(index, 1);
-                localStorage.setItem("carrito", JSON.stringify(carrito));
-                actualizarCarrito();
-            };
+        function finalizarPedido() {
+            alert("Gracias por tu compra. Tu pedido ha sido enviado.");
+            localStorage.removeItem("carrito"); // Limpia el carrito
+            window.location.href = "index.html"; // Redirigir a inicio
+        }
 
-            window.finalizarPedido = function () {
-                if (carrito.length === 0) {
-                    alert("Tu carrito está vacío.");
-                    return;
-                }
-
-                let detallesPedido = carrito.map(item => `${item.DESCRIPCIÓN} - $${item.PRECIO_VENTA}`).join("\n");
-                let mailtoLink = `mailto:vinoclubhermosillo@gmail.com?subject=Pedido&body=${encodeURIComponent(detallesPedido)}`;
-                window.location.href = mailtoLink;
-            };
-        });
+        document.addEventListener("DOMContentLoaded", cargarCarrito);
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
