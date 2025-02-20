@@ -3,112 +3,112 @@
       "ITEM": 219001,
       "DESCRIPCIÓN": "ACEITE PURO DE CANOLA 2/2.84 L KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 219,
-      "PRECIO VENTA": 262.8,
+      "COSTO TIENDA": 225,
+      "PRECIO VENTA": 282,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/ACEITE%20PURO%20DE%20CANOLA%2022.84%20L%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 83001,
-      "DESCRIPCIÓN": "AGUA PURIFICADA 35/500 ML KIRKLAND SIGNATURE",
+      "DESCRIPCIÓN": "AGUA PURIFICADA 40/500 ML KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 83,
-      "PRECIO VENTA": 99.6,
+      "COSTO TIENDA": 99,
+      "PRECIO VENTA": 124,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/AGUA%20PURIFICADA%2035500%20ML%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 199001,
       "DESCRIPCIÓN": "ALMENDRAS ENTERAS 1.36 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 199,
-      "PRECIO VENTA": 238.8,
+      "COSTO TIENDA": 265,
+      "PRECIO VENTA": 332,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/ALMENDRAS%20ENTERAS%201.36%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 189001,
       "DESCRIPCIÓN": "ARANDANO DESHIDRATADO 1.36 KG OCEANSPRAY",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 189,
-      "PRECIO VENTA": 226.8,
+      "COSTO TIENDA": 255,
+      "PRECIO VENTA": 255,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/ARANDANO%20DESHIDRATADO%201.36%20KG%20OCEANSPRAY.jpg?raw=true"
    },
    {
       "ITEM": 379001,
       "DESCRIPCIÓN": "BARRAS DE HIGO 40/56,7G NATURE'S BAKERY",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 379,
-      "PRECIO VENTA": 454.8,
+      "COSTO TIENDA": 429,
+      "PRECIO VENTA": 537,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/BARRAS%20DE%20HIGO%204056,7G%20NATURE'S%20BAKERY.jpg?raw=true"
    },
    {
       "ITEM": 449001,
       "DESCRIPCIÓN": "BARRAS DE PROTEÍNA 20/60 G KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 449,
-      "PRECIO VENTA": 538.8,
+      "COSTO TIENDA": 531,
+      "PRECIO VENTA": 664,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/BARRAS%20DE%20PROTE%C3%8DNA%202060%20G%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 439001,
       "DESCRIPCIÓN": "BOLSAS DE PLASTICO 200 49.2 L KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 439,
-      "PRECIO VENTA": 526.8,
+      "COSTO TIENDA": 396,
+      "PRECIO VENTA": 495,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/BOLSAS%20DE%20PLASTICO%20200%2049.2%20L%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 319001,
       "DESCRIPCIÓN": "BOTANA SURTIDA DE VEGETALES 30/28G SENSIBLE PORTIO",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 319,
-      "PRECIO VENTA": 382.8,
+      "COSTO TIENDA": 347,
+      "PRECIO VENTA": 434,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/BOTANA%20SURTIDA%20DE%20VEGETALES%203028G%20SENSIBLE%20PORTIO.jpg?raw=true"
    },
    {
       "ITEM": 215001,
       "DESCRIPCIÓN": "CAFÉ MOLIDO CHIAPAS 1 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 215,
-      "PRECIO VENTA": 258.8,
+      "COSTO TIENDA": 225,
+      "PRECIO VENTA": 282,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/CAF%C3%89%20MOLIDO%20CHIAPAS%201%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 349001,
       "DESCRIPCIÓN": "CAFÉ MOLIDO COLOMBIANO 1.36 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 349,
-      "PRECIO VENTA": 418.8,
+      "COSTO TIENDA": 409,
+      "PRECIO VENTA": 512,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/CAF%C3%89%20MOLIDO%20COLOMBIANO%201.36%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 249001,
       "DESCRIPCIÓN": "CEREAL DE TRIGO Y MIEL 1.36 KG HONEY BUNCHES OF OATS",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 249,
-      "PRECIO VENTA": 298.8,
+      "COSTO TIENDA": 265,
+      "PRECIO VENTA": 332,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/CEREAL%20DE%20TRIGO%20Y%20MIEL%201.36%20KG%20HONEY%20BUNCHES%20OF%20OATS.jpg?raw=true"
    },
    {
       "ITEM": 230002,
       "DESCRIPCIÓN": "CHICHARRON DE CERDO 400 G SNACKER",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 230,
-      "PRECIO VENTA": 276,
+      "COSTO TIENDA": 118,
+      "PRECIO VENTA": 148,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/CHICHARRON%20DE%20CERDO%20400%20G%20SNACKER.jpg?raw=true"
    },
    {
       "ITEM": 349002,
       "DESCRIPCIÓN": "DETERGENTE LIQUIDO 9 L MAS COLOR",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 349,
-      "PRECIO VENTA": 418.8,
+      "COSTO TIENDA": 308,
+      "PRECIO VENTA": 385,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/DETERGENTE%20LIQUIDO%209%20L%20MAS%20COLOR.jpg?raw=true"
    },
    {
       "ITEM": 229001,
       "DESCRIPCIÓN": "GRANOLA GOURMET 1 KG DASAVENA",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 229,
-      "PRECIO VENTA": 274.8,
+      "COSTO TIENDA": 235,
+      "PRECIO VENTA": 294,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/GRANOLA%20GOURMET%201%20KG%20DASAVENA.jpg?raw=true"
    },
    {
@@ -116,71 +116,71 @@
       "DESCRIPCIÓN": "LAVATRASTES LÍQUIDO 2.8 L AXION TRICLORO",
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 318,
-      "PRECIO VENTA": 381.6,
+      "PRECIO VENTA": 398,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/LAVATRASTES%20L%C3%8DQUIDO%202.8%20L%20AXION%20TRICLORO.jpg?raw=true"
    },
    {
       "ITEM": 269001,
       "DESCRIPCIÓN": "NUECES SURTIDAS 1.13 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 269,
-      "PRECIO VENTA": 322.8,
+      "COSTO TIENDA": 337,
+      "PRECIO VENTA": 422,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/NUECES%20SURTIDAS%201.13%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 289001,
       "DESCRIPCIÓN": "NUEZ DE LA INDIA 1.13 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 289,
-      "PRECIO VENTA": 346.8,
+      "COSTO TIENDA": 368,
+      "PRECIO VENTA": 460,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/NUEZ%20DE%20LA%20INDIA%201.13%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 229002,
       "DESCRIPCIÓN": "NUEZ PECANA 908 G KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 229,
-      "PRECIO VENTA": 274.8,
+      "COSTO TIENDA": 265,
+      "PRECIO VENTA": 332,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/NUEZ%20PECANA%20908%20G%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 447003,
       "DESCRIPCIÓN": "PALOMITAS C/CARAMELO Y QUESO 737 G CRETO",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 447,
-      "PRECIO VENTA": 536.4,
+      "COSTO TIENDA": 163,
+      "PRECIO VENTA": 204,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PALOMITAS%20CCARAMELO%20Y%20QUESO%20737%20G%20CRETO.jpg?raw=true"
    },
    {
       "ITEM": 319002,
       "DESCRIPCIÓN": "PALOMITAS MANTEQUILLA 44 PZAS DE 93.5G KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 319,
-      "PRECIO VENTA": 382.8,
+      "COSTO TIENDA": 368,
+      "PRECIO VENTA": 460,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PALOMITAS%20MANTEQUILLA%2044%20PZAS%20DE%2093.5G%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 200001,
       "DESCRIPCIÓN": "PAN PITA 1.4 KG LIBANIUS",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 200,
-      "PRECIO VENTA": 240.0,
+      "COSTO TIENDA": 112,
+      "PRECIO VENTA": 140,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PAN%20PITA%201.4%20KG%20LIBANIUS.jpeg?raw=true"
    },
    {
       "ITEM": 378001,
       "DESCRIPCIÓN": "PAPAS FRITAS ESTILO ARTESANAL 850 G CAPE COD",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 378,
-      "PRECIO VENTA": 453.6,
+      "COSTO TIENDA": 220,
+      "PRECIO VENTA": 275,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PAPAS%20FRITAS%20ESTILO%20ARTESANAL%20850%20G%20CAPE%20COD.jpg?raw=true"
    },
    {
       "ITEM": 419001,
       "DESCRIPCIÓN": "PAPEL HIGIENICO 30/380 HOJAS KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 419,
-      "PRECIO VENTA": 502.8,
+      "COSTO TIENDA": 370,
+      "PRECIO VENTA": 463,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PAPEL%20HIGIENICO%2030380%20HOJAS%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
@@ -188,15 +188,15 @@
       "DESCRIPCIÓN": "TOCINO DE CERDO 4/454 G KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 339,
-      "PRECIO VENTA": 406.8,
+      "PRECIO VENTA": 424,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOCINO%20DE%20CERDO%204454%20G%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 249001,
       "DESCRIPCIÓN": "TONKOTSU RAMEN 6/101 G NONGSHIM",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 249,
-      "PRECIO VENTA": 298.8,
+      "COSTO TIENDA": 255,
+      "PRECIO VENTA": 319,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TONKOTSU%20RAMEN%206101%20G%20NONGSHIM.jpg?raw=true"
    },
    {
@@ -204,63 +204,63 @@
       "DESCRIPCIÓN": "TOTOPOS 1.36 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
       "COSTO TIENDA": 258,
-      "PRECIO VENTA": 309.6,
+      "PRECIO VENTA": 323,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOTOPOS%201.36%20KG%20KIRKLAND%20SIGNATURE.jpeg?raw=true"
    },
    {
       "ITEM": 153001,
       "DESCRIPCIÓN": "PASAS CUBIERTAS DE CHOCOLATE 1.53 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 153,
-      "PRECIO VENTA": 184,
+      "COSTO TIENDA": 409,
+      "PRECIO VENTA": 512,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PASAS%20CUBIERTAS%20DE%20CHOCOLATE%201.53%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 136001,
       "DESCRIPCIÓN": "PISTACHES 1.36 KG KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 136,
-      "PRECIO VENTA": 163,
+      "COSTO TIENDA": 378,
+      "PRECIO VENTA": 473,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PISTACHES%201.36%20KG%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 61001,
       "DESCRIPCIÓN": "PURE DE TOMATE 6.1 KG DEL FUERTE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 61,
-      "PRECIO VENTA": 73,
+      "COSTO TIENDA": 199,
+      "PRECIO VENTA": 249,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/PURE%20DE%20TOMATE%2061%20KG%20DEL%20FUERTE.jpg?raw=true"
    },
    {
       "ITEM": 426001,
       "DESCRIPCIÓN": "SERVILLETAS 4260 PZAS KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 426,
-      "PRECIO VENTA": 511,
+      "COSTO TIENDA": 211,
+      "PRECIO VENTA": 264,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/SERVILLETAS%204260%20PZAS%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 214001,
       "DESCRIPCIÓN": "SUSTITUTO DE CREMA 2.14 KG COFFEE MATE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 214,
-      "PRECIO VENTA": 257,
+      "COSTO TIENDA": 306,
+      "PRECIO VENTA": 383,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/SUSTITUTO%20DE%20CREMA%2021.4%20KG%20COFFEE%20MATE.jpg?raw=true"
    },
    {
       "ITEM": 121601,
-      "DESCRIPCIÓN": "TOALLAS DE PAPEL 12160 HOJAS KIRKLAND SIGNATURE",
+      "DESCRIPCIÓN": "TOALLAS DE PAPEL 12 160 HOJAS KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 1216,
-      "PRECIO VENTA": 1460,
+      "COSTO TIENDA": 457,
+      "PRECIO VENTA": 572,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOALLAS%20DE%20PAPEL%2012160%20HOJAS%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    },
    {
       "ITEM": 225001,
-      "DESCRIPCIÓN": "TOALLAS SECADORA 2250 HOJAS KIRKLAND SIGNATURE",
+      "DESCRIPCIÓN": "TOALLAS SECADORA 250 HOJAS KIRKLAND SIGNATURE",
       "TIPO": "NO PERECEDERO",
-      "COSTO TIENDA": 225,
-      "PRECIO VENTA": 270,
+      "COSTO TIENDA": 457,
+      "PRECIO VENTA": 572,
       "IMAGEN": "https://github.com/AbarrotitoPremium/Abarrotito-Premium/blob/main/TOALLAS%20PSECADORA%20250%20HOJAS%20KIRKLAND%20SIGNATURE.jpg?raw=true"
    }
 ]
