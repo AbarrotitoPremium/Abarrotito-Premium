@@ -52,59 +52,20 @@
     <script>
         $(document).ready(function() {
             $.getJSON("https://raw.githubusercontent.com/AbarrotitoPremium/Abarrotito-Premium/main/productos.json", function(data) {
-                let productsHTML = "";
-                
-                // Lista de precios actualizados manualmente
-                let preciosActualizados = {
-                    "ACEITE PURO DE CANOLA 2/2.84 L KIRKLAND SIGNATURE": 281.25,
-                    "AGUA PURIFICADA 40/500 ML KIRKLAND SIGNATURE": 123.75,
-                    "ALMENDRAS ENTERAS 1.36 KG KIRKLAND SIGNATURE": 331.25,
-                    "ARANDANO DESHIDRATADO 1.36 KG OCEANSPRAY": 255,
-                    "BARRAS DE HIGO 40/56,7G NATURE'S BAKERY": 536.25,
-                    "BARRAS DE PROTEÍNA 20/60 G KIRKLAND SIGNATURE": 663.75,
-                    "BOLSAS DE PLASTICO 200 49.2 L KIRKLAND SIGNATURE": 495,
-                    "BOTANA SURTIDA DE VEGETALES 30/28G SENSIBLE PORTIO": 433.75,
-                    "CAFÉ MOLIDO CHIAPAS 1 KG KIRKLAND SIGNATURE": 281.25,
-                    "CAFÉ MOLIDO COLOMBIANO 1.36 KG KIRKLAND SIGNATURE": 511.25,
-                    "CEREAL DE TRIGO Y MIEL 1.36 KG HONEY BUNCHES OF OATS": 331.25,
-                    "CHICHARRON DE CERDO 400 G SNACKER": 147.5,
-                    "DETERGENTE LIQUIDO 9 L MAS COLOR": 385,
-                    "GRANOLA GOURMET 1 KG DASAVENA": 293.75,
-                    "LAVATRASTES LÍQUIDO 2.8 L AXION TRICLORO": 397.525,
-                    "NUECES SURTIDAS 1.13 KG KIRKLAND SIGNATURE": 421.25,
-                    "NUEZ DE LA INDIA 1.13 KG KIRKLAND SIGNATURE": 460,
-                    "NUEZ PECANA 908 G KIRKLAND SIGNATURE": 331.25,
-                    "PALOMITAS C/CARAMELO Y QUESO 737 G CRETO": 203.75,
-                    "PALOMITAS MANTEQUILLA 44 PZAS DE 93.5G KIRKLAND SIGNATURE": 460,
-                    "PAN PITA 1.4 KG LIBANIUS": 140,
-                    "PAPAS FRITAS ESTILO ARTESANAL 850 G CAPE COD": 275,
-                    "PAPEL HIGIENICO 30/380 HOJAS KIRKLAND SIGNATURE": 462.5,
-                    "PASAS CUBIERTAS DE CHOCOLATE 1.53 KG KIRKLAND SIGNATURE": 511.25,
-                    "PISTACHES 1.36 KG KIRKLAND SIGNATURE": 472.5,
-                    "PURE DE TOMATE 6/1 KG DEL FUERTE": 248.75,
-                    "SERVILLETAS 4/260 PZAS KIRKLAND SIGNATURE": 263.75,
-                    "SUSTITUTO DE CREMA 2/1.4 KG COFFEE MATE": 382.5,
-                    "TOALLAS DE PAPEL 12/160 HOJAS KIRKLAND SIGNATURE": 517.5,
-                    "TOALLAS P/SECADORA 2/250 HOJAS KIRKLAND SIGNATURE": 571.25,
-                    "TOCINO DE CERDO 4/454 G KIRKLAND SIGNATURE": 423.75,
-                    "TONKOTSU RAMEN 6/101 G NONGSHIM": 318.75,
-                    "TOTOPOS 1.36 KG KIRKLAND SIGNATURE": 322.5
-                };
-
+                let products = "";
                 data.forEach(item => {
-                    let precioFinal = preciosActualizados[item.DESCRIPCIÓN] || "Precio no disponible";
-                    productsHTML += `
+                    let precioVenta = (item["COSTO TIENDA"] / 0.80).toFixed(2); // Aplicando la fórmula
+                    products += `
                         <div class="col-md-4">
                             <div class="product-card">
                                 <img src="${item.IMAGEN}" alt="${item.DESCRIPCIÓN}">
                                 <h5>${item.DESCRIPCIÓN}</h5>
-                                <p><strong>Precio:</strong> $${precioFinal}</p>
+                                <p><strong>Precio:</strong> $${precioVenta}</p>
                             </div>
                         </div>
                     `;
                 });
-
-                $("#product-list").html(productsHTML);
+                $("#product-list").html(products);
             }).fail(function() {
                 console.error("Error al obtener el JSON. Verifica la URL o la estructura del archivo.");
             });
